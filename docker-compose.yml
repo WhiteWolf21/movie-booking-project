@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+
+  backend:
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    build:
+      dockerfile: Dockerfile
+      context: "./backend"
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    networks:
+      - movie-booking-project
+
+  frontend:
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    networks:
+      - movie-booking-project
+
+volumes:
+  dbdata0:
+
+networks: 
+  movie-booking-project: 
+    external: true

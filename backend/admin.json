@@ -1,0 +1,8 @@
+{
+    "_id": {
+        "$oid": "64aaf84ebb20448ef9b7ac09"
+    },
+    "email": "admin@gmail.com",
+    "password": "$2a$10$6eBIGtX9Uq9FraStw2JzaueuJT72ghpdiZ3WKP2z3AkB01aDZMFhy",
+    "addedMovies": []
+}
